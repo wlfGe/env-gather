@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<environment>
+	<gather class="com.briup.smart.env.client.GatherImpl">
+		<data-file-path>src/main/resources/data-file-simple</data-file-path>
+		<last-file-length-bak>last_file_length</last-file-length-bak>
+	</gather>
+	
+	<logger class="com.briup.smart.env.util.LogImpl">
+	</logger>
+	
+	<backup class="com.briup.smart.env.util.BackupImpl">
+		<base-Location>src/main/resources/</base-Location>
+	</backup>
+	 
+	<client class="com.briup.smart.env.client.ClientImpl">
+		<host>127.0.0.1</host>
+		<port>9999</port>
+	</client>
+	
+	<server class="com.briup.smart.env.server.ServerImpl">
+		<reciver-serverPort>9999</reciver-serverPort>
+		<shutdown-serverPort>8888</shutdown-serverPort>
+	</server>
+	
+	
+	<dbStore class="com.briup.smart.env.server.DBStoreImpl">
+		<batchSize>50</batchSize>
+	</dbStore>
+
+</environment>
